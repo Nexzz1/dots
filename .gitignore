@@ -1,0 +1,41 @@
+# --- Secrets & credentials: never commit ---
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.p12
+*.pfx
+*.kdbx
+.netrc
+.git-credentials
+id_rsa
+id_ed25519
+id_ecdsa
+*_token
+*secret*
+credentials*
+
+# --- Runtime state, logs, caches, installer leftovers ---
+*.log
+*.state
+cache/
+state/
+dots-backup/
+.dots-staging.*/
+
+# --- Editor & OS cruft ---
+*.swp
+*.swo
+*~
+.directory
+.DS_Store
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+
+# --- Personal / local overrides ---
+*.local
+local/
+private/
