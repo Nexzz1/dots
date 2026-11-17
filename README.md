@@ -34,7 +34,9 @@ dots/
 ├── noctalia/
 ├── screenshots/
 ├── wallpapers/
+├── .gitignore
 ├── install.sh
+├── LICENSE
 └── README.md
 ```
 
@@ -237,11 +239,18 @@ Some settings are specific to my hardware, display, installed applications or di
 
 ## Wallpapers
 
-The wallpapers I use are in [`wallpapers/`](wallpapers). Use `./install.sh --wallpapers` to copy them to `~/Pictures/Wallpapers`, which is where `settings.toml` looks for them.
-
-Noctalia supports dynamic theming, so the desktop's color palette adapts to the currently selected wallpaper. This keeps the snnl, panels, and other UI elements visually consistent with the background.
+Noctalia supports dynamic theming, so the desktop's color palette adapts to the currently selected wallpaper. This keeps the shell, panels, and other UI elements visually consistent with the background.
 
 [![Wallpaper Preview](screenshots/example.png)](screenshots/example.png)
+
+The wallpapers I use are in [`wallpapers/`](wallpapers). Use `./install.sh --wallpapers` to copy them to `~/Pictures/Wallpapers`, which is where `settings.toml` looks for them.
+
+The wallpapers in `wallpapers/` were downloaded from wallpaper aggregation sites and are **not licensed for redistribution**. They are provided here for personal convenience; if you use this repo, please download those wallpapers from their original sources instead:
+
+- wallhaven.cc
+- wallpaperflare.com
+- unsplash.com
+- uhdpaper.com
 
 ## Notes
 
