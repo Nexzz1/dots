@@ -97,19 +97,19 @@ chmod +x install.sh
 
 What the script does:
 
-1. Asks for confirmation (skip with --yes).
-2. Prepares everything in a temporary folder first: it copies the configs and replaces the **HOME** placeholder in noctalia/settings.toml with your real home directory. If anything goes wrong here, your current configs are not touched.
-3. Backs up your existing configs automatically. Any existing ~/.config/fastfetch, ~/.config/kitty, ~/.config/niri and ~/.config/noctalia are moved (not deleted) to ~/.config/dots-backup/<date-time>/.
-4. Puts the new configs in ~/.config/
+1. Asks for confirmation (skip with `--yes`).
+2. Prepares everything in a temporary folder first: it copies the configs and replaces the `__HOME__` placeholder in `noctalia/settings.toml` with your real home directory. If anything goes wrong here, your current configs are not touched.
+3. **Backs up your existing configs automatically.** Any existing `~/.config/fastfetch`, `~/.config/kitty`, `~/.config/niri` and `~/.config/noctalia` are **moved** (not deleted) to `~/.config/dots-backup/<date-time>/`.
+4. Puts the new configs in `~/.config/`.
 
-It refuses to run as root, so don't use sudo. Running it again is safe: every run gets its own backup folder.
+It refuses to run as root, so don't use `sudo`. Running it again is safe: every run gets its own backup folder.
 
 Options:
 
 | Option         | Effect                                                                                    |
 | -------------- | ----------------------------------------------------------------------------------------- |
 | `--yes`, `-y`  | Skip the confirmation prompt                                                              |
-| `--wallpapers` | Also copy `wallpapers/` to `~/Pictures/Wallpapers` (existing files are never overwritten) |
+| `--wallpapers` | Also copy `wallpapers/` to `~/Pictures/Wallpapers` (including subfolders; existing files are never overwritten) |
 
 ### 4. Finish the Noctalia setup
 
