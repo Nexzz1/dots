@@ -1,0 +1,65 @@
+// ============================================================
+// rules.kdl (cleaned up)
+// Rules run top to bottom. A LATER rule beats an EARLIER one.
+// ============================================================
+
+// 1) Shape for ALL windows. Change the corner radius HERE, and only here.
+window-rule {
+    geometry-corner-radius 3
+    clip-to-geometry true
+    draw-border-with-background false
+}
+
+// 2) Default look for ALL windows: slightly see-through + blur.
+//    There is NO "xray false" on purpose.
+window-rule {
+    opacity 0.96
+    background-effect {
+        blur true
+    }
+}
+
+// 3) A bit more see-through for some apps (they inherit blur from rule 2).
+window-rule {
+    match app-id="^kitty"
+    match app-id=r"^org\.gnome\.Nautilus$"
+    opacity 0.90
+}
+
+window-rule {
+    match app-id=r"^com\.microsoft\.VSCode$"
+    match app-id=r"^com\.stremio\.Stremio$"
+    opacity 0.93
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="zen"
+     opacity 1.0
+}
+
+// Floating Noctalia settings window.
+window-rule {
+    match app-id="dev.noctalia.Noctalia"
+    open-floating true
+    default-column-width { fixed 1080; }
+    default-window-height { fixed 920; }
+}
+
+layer-rule {
+    match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+    background-effect {
+        blur false
+    }
+}
+
+layer-rule {
+    match namespace="^noctalia-backdrop"
+    place-within-backdrop true
+}
+
+layout {
+    default-column-width { proportion 0.5; }
+}

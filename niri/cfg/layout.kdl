@@ -1,0 +1,25 @@
+// layout.kdl
+// Merged: your old layout.kdl + the block NiriMod kept in config.kdl.
+// Where they disagreed, NiriMod's values are used (they were winning before).
+layout {
+    gaps 10
+    center-focused-column "never"
+    always-center-single-column
+
+    background-color "transparent"
+
+    focus-ring {
+        width 1
+        active-color "#87c4ea"
+        inactive-color "#4cafd9"
+    }
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    struts {
+    }
+}
